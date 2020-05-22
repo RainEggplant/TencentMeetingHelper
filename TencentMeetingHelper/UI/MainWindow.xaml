@@ -1,0 +1,26 @@
+﻿<Window x:Class="TencentMeetingHelper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TencentMeetingHelper"
+        mc:Ignorable="d"
+        Title="Tencent Meeting Helper" Height="245.2" Width="220" WindowStyle="ToolWindow" Loaded="Window_Loaded" ResizeMode="CanMinimize" Icon="../Resources/icon.png">
+    <Grid AutomationProperties.HelpText="Visit GitHub page to get updates, source code, etc.">
+        <Button x:Name="SnapLeftButton" Content="Snap To Left" HorizontalAlignment="Left" Margin="20,15,0,0" VerticalAlignment="Top" Width="170" Click="SnapLeftButton_Click"/>
+        <Button x:Name="SnapRightButton" Content="Snap To Right" HorizontalAlignment="Left" Margin="20,45,0,0" VerticalAlignment="Top" Width="170" Click="SnapRightButton_Click"/>
+        <Button x:Name="TopMostButton" Content="Set Always On Top" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="20,75,0,0" Click="TopMostButton_Click"/>
+        <Button x:Name="NoTopMostButton" Content="Unset Always On Top" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Margin="20,105,0,0" Click="NoTopMostButton_Click"/>
+        <StatusBar VerticalAlignment="Bottom" Height="22">
+            <StatusBarItem HorizontalAlignment="Right" Margin="0,0,10,0">
+                <TextBlock Name="StatusText" Text="Ready" />
+            </StatusBarItem>
+        </StatusBar>
+        <Button x:Name="GitHubButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="24" Margin="166,143,0,0" Height="24"
+                ToolTipService.InitialShowDelay="500" ToolTipService.ShowDuration="5000" ToolTipService.BetweenShowDelay="1000" 
+                ToolTip="Visit GitHub page to get updates, source code, etc." Click="GitHubButton_Click">
+            <Image Source="../Resources/GitHub-Mark-32px.png" Width="18" Height="18" />
+        </Button>
+        <Label Content="v0.1.0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="156,165,0,0"/>
+    </Grid>
+</Window>
